@@ -1,0 +1,20 @@
+server:
+  port: 8080
+
+springdoc:
+  swagger-ui: "/swagger.html"
+#  show-actuator: true
+
+management:
+  endpoints.web:
+    base-path: "/"
+    exposure.include: "*"
+  endpoint.health:
+    show-details: always
+
+api:
+  host: "https://api.github.com"
+  search-uri: "/search/repositories"
+  timeout:
+    connectionMillis: 2000
+    responseMillis: 10000
